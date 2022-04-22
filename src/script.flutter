@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'dart:math';
+import 'dart:ui';
+
+var displayColor = Colors.white;
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Hello World',
+      home: Scaffold(
+        backgroundColor: Color(0xff00BCD1),
+        appBar: AppBar(
+          title: Text('App Test 01'),
+        ),
+        body: Center(child: Body()),
+      ),
+    );
+  }
+}
+
+/// Stateless widget that the main app instantiates.
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text('Hello, World! \n \n Ich heiße \n M. Fachry DwiHan!',
+                style: TextStyle(
+                color: displayColor,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Montserrat',
+                fontSize: 25,
+        ),
+                textAlign: TextAlign.center,
+     );
+  }
+}
